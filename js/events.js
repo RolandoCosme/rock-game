@@ -1,12 +1,32 @@
 $(document).ready(function() {
   var choices = ["rock", "paper", "scissors"];
 
+
  $(".btn-success").on("click", function (){
   var ranNum = Math.floor(Math.random() * choices.length);
-      $("#computerSelection").html(choices[ranNum]);
+  var computerChoice = choices[ranNum];
+      $("#computerSelection").html(computerChoice);
       $("#playerSelection").html(this.id);
-      if ($(this).attr("id") === choices[ranNum]) {
-       console.log("blah!");
+      if ($(this).attr("id") === computerChoice) {
+       console.log("tied");
+      }
+      else if ($(this).attr("id") === "rock" && computerChoice === "paper") {
+       console.log("your computer wins");
+      }
+      else if ($(this).attr("id") === "rock" && computerChoice === "scissors") {
+       console.log("you win");
+      }
+      else if ($(this).attr("id") === "paper" && computerChoice === "rock") {
+       console.log("you win");
+      }
+      else if ($(this).attr("id") === "paper" && computerChoice === "scissors") {
+       console.log("your computer wins");
+      }
+      else if ($(this).attr("id") === "scissors" && computerChoice === "paper") {
+       console.log("you win");
+      }
+      else if ($(this).attr("id") === "scissors" && computerChoice === "rock") {
+       console.log("your computer wins");
       }
 });
 
