@@ -1,23 +1,23 @@
     $(document).ready(function() {
+      var choices = ["rock", "paper", "scissors"];
+      // $("#computerSelection").hide;
 
-    var choices = ["rock", "paper", "scissors"];
-
-    function gamePick(){
-        
+     $(".btn-success").on("click", function gamePick(){
       var ranNum = Math.floor(Math.random() * choices.length);
-      $("#computerSelection").html(choices[ranNum]);
-          $(".btn-success").on('click', function(){
-          $("#computerSelection").html(gamePick);
+          $("#computerSelection").html(choices[ranNum]);
           $("#playerSelection").html(this.id);
-      });
-    };
-    
-        $("#startGame").on("click", gamePick());
+    });
 
+  //     $(".btn-success").on("click", function(playerPick){
+        
+  // });
 
-        if (computerSelection === paper | playerSelection === paper) {
-          $(".modal-body").html("Same choice. No points");
-        }
+//         if (computerSelection === paper | playerSelection === paper) {
+//           $(".modal-body").html("Same choice. No points");
+          
+//         }
+
+// add the prevent default (e) e.prevernt default
 
             
 });
