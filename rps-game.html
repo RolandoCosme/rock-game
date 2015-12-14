@@ -32,31 +32,41 @@
       <button class="btn-success"  id="rock"><i class="fa fa-hand-rock-o fa-5x"></i></button>
       <button class="btn-success"  id="paper"><i class="fa fa-hand-paper-o fa-5x"></i></button>
       <button class="btn-success"  id="scissors"><i class="fa fa-hand-scissors-o fa-5x"></i></button>
-      <button class="btn-success"  id="chuck"><img id="smallChuck"src="css/images/chuck.jpg"></button>
+      <button class="btn-success"  id="chuck" data-toggle="modal" data-target="#chuckModal"><img id="smallChuck"src="css/images/chuck.jpg"></button>
     </div>
   </div>
 </div>
 
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">Game Alert</h4>
-        </div>
-        <div class="modal-body">
-          <div class="col-md-4"><h2 class="chuckHidden">Chuck Always Wins!!!</h2>
-          </div>
-          <div class="col-md-4 cold-md-offset-4" ><img id="bigChuck" class="chuckHidden" src="css/images/chuck.jpg">
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+<div class="modal fade" id="chuckModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Chuck Always Wins!!!</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <div class="col-sm-4 col-sm-offset-4" ><img id="modalPic" src="css/images/chuck-scissors.jpg">
         </div>
       </div>
     </div>
   </div>
-
+</div>
+<div class="modal fade" id="gameOverModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Game Over -  Advice of the Day</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <div class="col-sm-4 col-sm-offset-4" ><img id="modalPic" src="css/images/chuck-code.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>

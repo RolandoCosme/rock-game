@@ -64,16 +64,15 @@ $(document).ready(function() {
         $("#gameBar").css("width", "0%")
       }
       if (barUp + 10 > 110) {
+        computerScoreUp = 0;
+        playerScoreUp = 0;
+        tied = 0 ;
+        $("#gameOverModal").modal()
+
       console.log("game over!")
       };
 
   });
-  
-  $("chuck").click(function(){
-    $("#myModal").show();
-    $(this).addClass("slideUp");
-
- });
 
 });
 
