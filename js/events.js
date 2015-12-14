@@ -3,6 +3,7 @@ $(document).ready(function() {
   var computerScoreUp = 0
   var playerScoreUp = 0
   var tied = 0
+  $(".chuckHidden").hide();
 
 
  $(".btn-success").on("click", function (){
@@ -39,7 +40,23 @@ $(document).ready(function() {
         computerScoreUp++;
         $("#computerScore").html(computerScoreUp)
       }
+      else if ($(this).attr("id") === "chuck" && computerChoice === "rock" || "paper" || "scissors") {
+        computerScoreUp = 0;
+        playerScoreUp = 0;
+        tied = 0 ;
+        $("#computerScore").html(computerScoreUp)
+        $("#playerScore").html(playerScoreUp)
+        $("#tied").html(tied)
+      }
+
+      $("chuck").click(function(){
+        $(".chuckHidden").show();
+        $(this).addClass("slideUp");
+
+  });
 });
+
+
 
 //           $(".modal-body").html("Same choice. No points");
 // add the prevent default (e) e.prevernt default

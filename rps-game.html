@@ -4,13 +4,20 @@
   <title>Rock Paper Scissor - Game</title>
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/animations.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-  <div class="col-md-4 col-md-offset-8">
-    <button class="btn-default" id="startGame">Start Game</button>
+  <div class="container">
+    <div class="col-md-4"><h2 class="chuckHidden">Chuck Always Wins!!!</h2>
+    </div>
+    <div class="col-md-4 cold-md-offset-4" ><img id="bigChuck" class="chuckHidden" src="css/images/chuck.jpg">
+    </div>
+    <div class="col-md-4 col-md-offset-8">
+      <button class="btn-default" id="startGame">Start Game</button>
+    </div>
   </div>
-
   <div><h4>Computer</h4></div>
   <div id="computerSelection">Computer Pick</div>
   <div><h4>Player</h4></div>
@@ -27,6 +34,7 @@
       <button class="btn-success"  id="rock"><i class="fa fa-hand-rock-o fa-5x"></i></button>
       <button class="btn-success"  id="paper"><i class="fa fa-hand-paper-o fa-5x"></i></button>
       <button class="btn-success"  id="scissors"><i class="fa fa-hand-scissors-o fa-5x"></i></button>
+      <button class="btn-success"  id="chuck"><img id="smallChuck"src="css/images/chuck.jpg"></button>
     </div>
   </div>
 </div>

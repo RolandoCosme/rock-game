@@ -1,0 +1,21 @@
+#chuck {
+  width: 80px;
+  height: 84px;
+  vertical-align: 22px;
+}
+
+#smallChuck {
+  width: 60px;
+  height: 65px;
+}
+
+#bigChuck {
+  width: 200px;
+  height: 200px;
+}
+
+body {
+  background-image: url("images/rps-cartoon.jpg");
+  background-repeat:  no-repeat;
+  background-position: center;
+}
