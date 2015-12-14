@@ -24,3 +24,9 @@ body {
   height: 20px;
   width: 0%;
 }
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  
+}
