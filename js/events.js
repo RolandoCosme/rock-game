@@ -79,15 +79,19 @@ $(document).ready(function() {
         $("#playerScore").html(playerScoreUp)
         $("#tied").html(tied)
         $("#gameBar").css("width", "0%")
-
       }
-      if (barUp + 10 > 110) {
+
+      if (barUp + 10 >110) {
+        $("#gameOverModal").modal()
+        $("#modalComputerScore").html(computerScore)
+        $("#modalPlayerScore").html(playerScore)
+        // if (computerScore > layerScore)
+
         computerScoreUp = 0;
         playerScoreUp = 0;
-        tied = 0 ;
+        tied = 0;
         gameProgress = 0;
-        $("#gameOverModal").modal()
-
+        
       console.log("game over!")
       };
 
