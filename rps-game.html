@@ -10,13 +10,15 @@
 </head>
 <body>
   <div class="container">
-    <div class="progress progress-striped active">
-      <div class="progress-bar" id="gameBar"></div>
+    <div class="row col-md-10">
+      <div class="progress progress-striped active">
+        <div class="progress-bar" id="gameBar"></div>Game Progress
+      </div>
     </div>
   </div>
   <div class="container">
     <div><h4>Computer</h4></div>
-      <div id="computerSelection">Computer Pick</div>
+      <div id="computerSelection">AI Pick</div>
     <div><h4>Player</h4></div>
       <div id="playerSelection">Your Pick</div>
     <div><h4>Computer Score</h4></div>
@@ -35,6 +37,14 @@
       <button class="btn-success"  id="chuck" data-toggle="modal" data-target="#chuckModal"><img id="smallChuck"src="css/images/chuck.jpg"></button>
     </div>
   </div>
+
+      <div class="row col-md-6 col-md-offset-3">
+        <footer>
+          <p><h2>Rock Paper Scissors feat. Chuck Norris</h2></p>
+          <p><h3>Use 10 tries to try and win against AI</h3></p>
+        </footer>
+      </div>
+
 </div>
 
 <div class="modal fade" id="chuckModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

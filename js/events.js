@@ -4,6 +4,7 @@ $(document).ready(function() {
   var playerScoreUp = 0
   var tied = 0
   var barUp = 10
+  var gameProgress = 0
 
  $(".btn-success").on("click", function (){
   var ranNum = Math.floor(Math.random() * choices.length);
@@ -17,56 +18,74 @@ $(document).ready(function() {
         $("#tied").html(tied)
         barUp = (barUp)+ 10;
         $("#gameBar").css("width", (barIncrease))
+        gameProgress = (gameProgress) +1;
+        $("#gameBar").html(gameProgress)
       }
       else if ($(this).attr("id") === "rock" && computerChoice === "paper") {
         computerScoreUp++;
         $("#computerScore").html(computerScoreUp)
         barUp = (barUp)+ 10;
-        $("#gameBar").css("width", (barIncrease))  
+        $("#gameBar").css("width", (barIncrease))
+        gameProgress = (gameProgress) +1;
+        $("#gameBar").html(gameProgress)
       }
       else if ($(this).attr("id") === "rock" && computerChoice === "scissors") {
         playerScoreUp++;
         $("#playerScore").html(playerScoreUp)
         barUp = (barUp)+ 10;
-        $("#gameBar").css("width", (barIncrease))       
+        $("#gameBar").css("width", (barIncrease))
+        gameProgress = (gameProgress) +1;
+        $("#gameBar").html(gameProgress)       
       }
       else if ($(this).attr("id") === "paper" && computerChoice === "rock") {
         playerScoreUp++;
         $("#playerScore").html(playerScoreUp)
         barUp = (barUp)+ 10;
-        $("#gameBar").css("width", (barIncrease))      
+        $("#gameBar").css("width", (barIncrease))
+        gameProgress = (gameProgress) +1;
+        $("#gameBar").html(gameProgress)     
       }
       else if ($(this).attr("id") === "paper" && computerChoice === "scissors") {
         computerScoreUp++;
         $("#computerScore").html(computerScoreUp)
         barUp = (barUp)+ 10;
-        $("#gameBar").css("width", (barIncrease))      
+        $("#gameBar").css("width", (barIncrease))
+        gameProgress = (gameProgress) +1;
+        $("#gameBar").html(gameProgress)     
       }
       else if ($(this).attr("id") === "scissors" && computerChoice === "paper") {
         playerScoreUp++;
         $("#playerScore").html(playerScoreUp)
         barUp = (barUp)+ 10;
-        $("#gameBar").css("width", (barIncrease)) 
+        $("#gameBar").css("width", (barIncrease))
+        gameProgress = (gameProgress) +1;
+        $("#gameBar").html(gameProgress)
       }
       else if ($(this).attr("id") === "scissors" && computerChoice === "rock") {
         computerScoreUp++;
         $("#computerScore").html(computerScoreUp)
         barUp = (barUp)+ 10;
-        $("#gameBar").css("width", (barIncrease)) 
+        $("#gameBar").css("width", (barIncrease))
+        gameProgress = (gameProgress) +1;
+        $("#gameBar").html(gameProgress) 
       }
       else if ($(this).attr("id") === "chuck" && computerChoice === "rock" || "paper" || "scissors") {
         computerScoreUp = 0;
         playerScoreUp = 0;
-        tied = 0 ;
+        tied = 0;
+        gameProgress = 0;
+        $("#gameBar").html(gameProgress)
         $("#computerScore").html(computerScoreUp)
         $("#playerScore").html(playerScoreUp)
         $("#tied").html(tied)
         $("#gameBar").css("width", "0%")
+
       }
       if (barUp + 10 > 110) {
         computerScoreUp = 0;
         playerScoreUp = 0;
         tied = 0 ;
+        gameProgress = 0;
         $("#gameOverModal").modal()
 
       console.log("game over!")
